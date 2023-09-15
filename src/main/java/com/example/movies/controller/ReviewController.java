@@ -1,5 +1,7 @@
-package com.example.movies;
+package com.example.movies.controller;
 
+import com.example.movies.model.Review;
+import com.example.movies.service.ReviewService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -9,6 +11,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/api/v1/reviews")
+@CrossOrigin(origins = "*")
 public class ReviewController {
     @Autowired
     private ReviewService reviewService;
